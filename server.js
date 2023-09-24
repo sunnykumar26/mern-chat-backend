@@ -87,11 +87,15 @@ io.on('connection', (socket)=> {
 
 })
 
+app.get('/', (req, res)=> {
+  res.send('chat app is running');
+})
 
 app.get('/rooms', (req, res)=> {
   res.json(rooms)
 })
 
-server.listen(PORT, ()=> {
-  console.log('listening to port', PORT)
-})
+server.listen(PORT, '0.0.0.0', err => {
+    if (err) throw err
+    console.log(`Listening on port ${port}`)
+  })
