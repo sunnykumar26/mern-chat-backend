@@ -97,5 +97,5 @@ app.get('/rooms', (req, res)=> {
 
 server.listen(PORT, '0.0.0.0', err => {
     if (err) throw err
-    console.log(`Listening on port ${port}`)
+    console.log(`Listening on port` + PORT)
   })
